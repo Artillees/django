@@ -1,0 +1,23 @@
+<h1>Последние вакансии</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Компания</th>
+            <th>Оклад</th>
+            <th>Регион</th>
+            <th>Дата публикации</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for job in recent_jobs %}
+        <tr>
+            <td>{{ job.title }}</td>
+            <td>{{ job.company }}</td>
+            <td>{{ job.salary }}</td>
+            <td>{{ job.region }}</td>
+            <td>{{ job.published_at|date:"d.m.Y" }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

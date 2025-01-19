@@ -1,0 +1,19 @@
+<h1>Топ-20 навыков по годам</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Год</th>
+            <th>Навык</th>
+            <th>Частота использования</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for skill in skills %}
+        <tr>
+            <td>{{ skill.year }}</td>
+            <td>{{ skill.skill_name }}</td>
+            <td>{{ skill.total_frequency }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,140 @@
+
+/* Основной стиль для body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль для заголовков и шрифтов */
+h1, h2, h3 {
+    font-family: 'Helvetica', sans-serif;
+    color: #333;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Навигация */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Основное содержимое */
+main {
+    padding: 20px;
+}
+
+/* Стиль для таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Стилизация картинок */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Стиль для футера */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Стилизация карточек профессий */
+.profession {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+}
+
+.profession h2 {
+    color: #007bff;
+}
+
+/* Стили для блоков с профессиями */
+.professions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Активная ссылка в навигации */
+nav ul li a.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Плавные анимации для кнопок и элементов */
+a, .profession {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover, .profession:hover {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+}

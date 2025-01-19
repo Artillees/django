@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<h1>Профессии</h1>
+
+<p>Здесь представлено описание различных профессий в области IT. Например, профессия разработчика программного обеспечения...</p>
+
+<div class="professions">
+    {% for profession in professions %}
+    <div class="profession">
+        <h2>{{ profession.name }}</h2>
+        <p>{{ profession.description }}</p>
+        {% if profession.image %}
+        <img src="{{ profession.image.url }}" alt="{{ profession.name }}" class="img-fluid">
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

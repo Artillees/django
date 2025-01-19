@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}География{% endblock %}
+
+{% block content %}
+<h1>География вакансий</h1>
+
+<h2>Уровень зарплат по городам</h2>
+<img src="{% static 'images/geo_salary.png' %}" alt="График зарплат по городам">
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Город</th>
+            <th>Средняя зарплата</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for city in geography %}
+        <tr>
+            <td>{{ city.city }}</td>
+            <td>{{ city.avg_salary }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
